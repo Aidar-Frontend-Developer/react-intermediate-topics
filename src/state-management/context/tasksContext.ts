@@ -6,6 +6,6 @@ export interface TasksContextType {
 	dispatch: Dispatch<TaskAction>;
 }
 
-const TaskContext = createContext<TasksContextType>({} as TasksContextType);
+const TasksContext = createContext<TasksContextType>({} as TasksContextType);
 
-export default TaskContext;
+export default TasksContext;

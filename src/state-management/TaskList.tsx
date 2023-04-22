@@ -1,10 +1,10 @@
-import { useContext } from 'react';
-import AuthContext from './context/authContext';
-import TaskContext from './context/tasksContext';
+import useAuth from './hooks/useAuth';
+import useTasks from './hooks/useTasks';
 
 const TaskList = () => {
-	const { tasks, dispatch } = useContext(TaskContext);
-	const { user } = useContext(AuthContext);
+	const { tasks, dispatch } = useTasks();
+	const { user } = useAuth();
+
 	return (
 		<>
 			<p>User: {user}</p>
