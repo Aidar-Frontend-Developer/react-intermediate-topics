@@ -1,5 +1,5 @@
 import { Dispatch, createContext } from 'react';
-import { AuthAction } from '../reducers/loginReducer';
+import { AuthAction } from './AuthProvider';
 
 interface AuthContextType {
 	user: string;
@@ -7,4 +7,5 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType);
+
 export default AuthContext;
