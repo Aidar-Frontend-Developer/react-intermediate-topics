@@ -1,11 +1,13 @@
-import { useReducer } from 'react';
-import tastReducer from './reducers/tasksReducer';
+import { useContext } from 'react';
+import AuthContext from './context/authContext';
+import TaskContext from './context/tasksContext';
 
 const TaskList = () => {
-	const [tasks, dispatch] = useReducer(tastReducer, []);
-
+	const { tasks, dispatch } = useContext(TaskContext);
+	const { user } = useContext(AuthContext);
 	return (
 		<>
+			<p>User: {user}</p>
 			<button
 				onClick={() =>
 					dispatch({
